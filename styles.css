@@ -1,0 +1,120 @@
+/*
+For fully functional styles you need to have font awesome,
+or replace icons with your own
+*/
+
+/** Styles for demo purposes **/
+body {
+    background-color: #E9EAEC;
+}
+
+#demo-wrapper {
+    height: 30px;
+    width: 100%;
+    background-color: #F9F9F9;
+}
+
+/******************************/
+
+:root {
+    --multiChkbox-darkGray: #4e5256;
+    --multiChkbox-gray: #BFC0BE;
+    --multiChkbox-lightGray: #F9F9F9;
+    --multiChkbox-lightBlue: #0066B3;
+}
+
+.multiChkbox-container {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    height: 28px;
+    width: 42px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.multiChkbox-container:hover {
+    border: 1px solid var(--multiChkbox-darkGray);
+    cursor: pointer;
+}
+
+.multiChkbox-main {
+    flex: 3;
+}
+
+.multiChkbox-main input[type=checkbox] {
+    position: relative;
+    display: inline-block;
+    width: 5px;
+    padding: 8px;
+    border: 2px solid var(--multiChkbox-darkGray);
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.multiChkbox-main input[type=checkbox]:checked:after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 700;
+	content: '\f00c';
+	font-size: 14px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	color: var(--multiChkbox-darkGray);
+}
+
+.multiChkbox-select {
+    flex:1;
+}
+
+.multiChkbox-select > i {
+    margin:5px 2px 0px 0px;
+    padding-left:2px;
+    color:var(--multiChkbox-darkGray);
+}
+.multiChkbox-main:hover,
+.multiChkbox-select:hover {
+    background-color: var(--multiChkbox-gray);
+    border-radius: 2px;
+}
+
+.multiChkbox-option-container {
+    display:none;
+    position:absolute;
+    top:24px;
+    left:7px;
+    width:120px;
+    background-color: var(--multiChkbox-lightGray);
+    border:1px solid var(--multiChkbox-darkGray);
+    border-radius: 3px;
+}
+
+.multiChkbox-option-container > div {
+    display:flex;
+    flex-flow: column;
+    padding:5px 0px;
+}
+
+.multiChkbox-option-container > div > span {
+    padding:5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.multiChkbox-option-container > div > span:hover {
+    color: var(--multiChkbox-lightBlue);
+    text-decoration: underline;
+}
+
+
+.multiChkbox-subIsSelected input[type=checkbox]:checked:after {
+    content: '\f068';
+    left:2px;
+}
+
+.multiChkbox-visibleContainer {
+    display:block;
+}
