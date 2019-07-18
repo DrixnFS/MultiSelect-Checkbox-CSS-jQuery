@@ -33,5 +33,11 @@ $('your-selector')
         //variable holding the name of selected selection from checkbox
         var selectedSelection = $(e.target).attr('data-multiChkbox-option');
         //TODO: Your code block for handling the selection actions based on the data-sets you set in the html
-
+        switch (selectedSelection) {
+            case '':
+                break;
+            default:
+                console.log('unsuported multiChkbox option');
+                break;
+        }
     });
